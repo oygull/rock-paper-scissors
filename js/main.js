@@ -79,35 +79,6 @@ console.log(e,bot);
   }
 }
 
-  
-
-
-// let botCount = 0;
-// let yourCount =0;
-
-// function firstScore(el){
-//  
-// 
-
-
-//   botScore.innerHTML= botCount;
-//   yourScore.innerHTML = yourCount;
-
-// //   if(yourCount==6 || botCount==6){
- 
-// //   if(botCount>yourCount){
-// //   player.innerHTML="Player Wins"
-// //   }
-// //   else if(botCount<yourCount){
-// //     player.innerHTML="Player Wins"
-// //   }
-// //   botCount = 0;
-// //   yourCount = 0;
-// //   botScore.innerHTML= botCount;
-// //   yourScore.innerHTML = yourCount;
-// // }
-
-// }
 
 function restart(){
   gameResult.style.display='none';
