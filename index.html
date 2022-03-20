@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Game</title>
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -13,10 +13,51 @@
 
 <body>
 
-  
- </div>
+<div class="content">
+  <div class="game-header">
+    <div class="title-box">
+      <h1 class="title">Rock <br> Paper <br> Scissors</h1>
+    </div>
+    <p id="player"></p>
+    <div class="score-box">
+      <p class="score-text">Your score</p>
+      <p  id="yourScore" class="score">0</p>
+    </div>
+  </div>
+  <div id="game" class="game">
+    <img class="bg-image" src="images/bg-image.svg" alt="bg-image">
+    <div class="game-inner">
+      <button onclick="getResult('paper')" id="paper" class="game-btn first-btn">
+        <img src="images/paper.png" alt="paper">
+      </button>
+      <button onclick="getResult('rock')" id="rock" class="game-btn">
+        <img src="images/rock.png" alt="rock">
+      </button>
+    </div>
+    <button onclick="getResult('scissors')" id="scissors" class="game-btn">
+      <img src="images/scissors.png" alt="scissors">
+    </button>
+  </div>
 
-
+  <div id="gameResult" class="game-result">
+    <div class="result">
+      <p class="your-result-text"> YOU PICKED </p>
+      <button class="game-btn first-btn">
+        <img id="yourImage" src="images/paper.png" alt="paper">
+      </button>
+    </div>
+    <div class="overal-result">
+      <h2 id="winner" class="winner">PLAY!</h2>
+      <button onclick="restart()" class="restart-btn">PLAY AGAIN</button>
+    </div>
+    <div class="result">
+      <p class="player-result-text">PLAYER PICKED</p>
+      <button class="game-btn first-btn">
+        <img  id="playerImage"  src="images/paper.png" alt="paper">
+      </button>
+    </div>
+  </div>
+</div>
   <script src="js/main.js">
   </script>
 </body>
