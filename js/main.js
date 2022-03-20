@@ -51,27 +51,27 @@ console.log(e,bot);
    if(bot == e){
     winner.innerHTML = 'DRAW'
    }
-  else if(bot === "rock" && e === "scissors"){
+  else if(bot == "rock" && e == "scissors"){
     winner.innerHTML = 'YOU LOSE';
     playerS++;
   }
-  else if(bot === "scissors" && e === "paper"){
+  else if(bot == "scissors" && e == "paper"){
     winner.innerHTML = 'YOU LOSE';
     playerS++;
   }
-  else if(bot === "paper" && e === "rock"){
+  else if(bot == "paper" && e == "rock"){
     winner.innerHTML = 'YOU LOSE';
     playerS++;
   }
-  else if(bot === "scissors" && e === "rock"){
+  else if(bot == "scissors" && e == "rock"){
      winner.innerHTML = 'YOU WIN'
      score++;
   }
-  else if(bot === "paper" && e === "scissors"){
+  else if(bot == "paper" && e == "scissors"){
      winner.innerHTML = 'YOU WIN';
      score++;
   }
-  else if(bot === "rock" && e === "papper"){
+  else if(bot == "rock" && e == "papper"){
      winner.innerHTML = 'YOU WIN'
      score++;
   }
@@ -80,6 +80,13 @@ console.log(e,bot);
 
   if(score==5){
     alert('Your score is 5, you win!');
+    score=0;
+    playerS=0;
+    yourScore.innerHTML= score;
+    playersScore.innerHTML = playerS;
+  }
+  else if(playerS==5){
+    alert("Player's score is 5, you lose!");
     score=0;
     playerS=0;
     yourScore.innerHTML= score;
