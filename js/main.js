@@ -1,4 +1,5 @@
-let yourScore = document.getElementById('yourScore')
+let yourScore = document.getElementById('yourScore');
+let playersScore = document.getElementById('playersScore')
 let player = document.getElementById('player');
 let game = document.getElementById('game')
 let gameResult = document.getElementById('gameResult');
@@ -6,6 +7,7 @@ let yourImage = document.getElementById('yourImage');
 let playerImage = document.getElementById('playerImage');
 let winner = document.getElementById('winner');
 let score = 0;
+let playerS = 0;
 
 function getResult(e){
   let randomNum = Math.floor((Math.random()*3)+1);
@@ -50,13 +52,16 @@ console.log(e,bot);
     winner.innerHTML = 'DRAW'
    }
   else if(bot === "rock" && e === "scissors"){
-    winner.innerHTML = 'YOU LOSE'
+    winner.innerHTML = 'YOU LOSE';
+    playerS++;
   }
   else if(bot === "scissors" && e === "paper"){
-    winner.innerHTML = 'YOU LOSE'
+    winner.innerHTML = 'YOU LOSE';
+    playerS++;
   }
   else if(bot === "paper" && e === "rock"){
-    winner.innerHTML = 'YOU LOSE'
+    winner.innerHTML = 'YOU LOSE';
+    playerS++;
   }
   else if(bot === "scissors" && e === "rock"){
      winner.innerHTML = 'YOU WIN'
@@ -71,11 +76,14 @@ console.log(e,bot);
      score++;
   }
   yourScore.innerHTML= score;
+  playersScore.innerHTML = playerS;
 
   if(score==5){
     alert('Your score is 5, you win!');
     score=0;
+    playerS=0;
     yourScore.innerHTML= score;
+    playersScore.innerHTML = playerS;
   }
 }
 
